@@ -14,36 +14,15 @@ import java.util.List;
 @Data
 @jakarta.persistence.Entity
 @Table(name = "Doctor")
-public class Doctor extends Entity implements Serializable {
-
-    @Column(name = "Full_Name")
-    @NotNull
-    private String FullName;
-
-    @Column(name = "Email")
-    @NotNull
-    private String Email;
+public class Doctor extends User implements Serializable {
 
     @Column(name = "CRM")
     @NotNull
     private String Crm;
 
-    @Column(name = "CPF")
-    @NotNull
-    private String Cpf;
-
-    @Column(name = "Password")
-    @NotNull
-    private String Password;
-
     @Column(name = "Date_Birth")
     @NotNull
     private Date DateBirth;
-
-    @Column(name = "Last_Login")
-    @NotNull
-    private Date LastLogin;
-
 
     public Doctor(String fullName, String email, String crm, String cpf, String password, Date dateBirth, Date lastLogin, Date createdAt, Date updatedAt, Boolean isActive) {
         FullName = fullName;

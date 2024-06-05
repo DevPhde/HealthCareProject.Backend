@@ -15,7 +15,7 @@ public class DoctorRepositoryImplementation {
 
     public Doctor findByCpfOrEmail(String cpfOrEmail) {
         List results = entityManager.createNativeQuery(
-                        "SELECT * FROM Doctor WHERE u.CPF = :cpfOrEmail OR u.Email = :cpfOrEmail", Doctor.class)
+                        "SELECT * FROM Doctor WHERE CPF = :cpfOrEmail OR Email = :cpfOrEmail", Doctor.class)
                 .setParameter("cpfOrEmail", cpfOrEmail)
                 .getResultList();
 

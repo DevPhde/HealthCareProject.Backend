@@ -23,7 +23,7 @@ import java.util.Optional;
 
 @Service
 public class UserAuthorizationHandler {
-      @Autowired
+    @Autowired
     private final DoctorRepositoryImplementation doctorRepository;
     @Autowired
     private final PatientRepositoryImplementation patientRepository;
